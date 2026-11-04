@@ -1,6 +1,6 @@
 # Sahil Rohankar — Portfolio
 
-A single-page React portfolio for Sahil Rohankar, Software Developer in Pune, India. Built on the existing [personal-portfolio starter](https://github.com/metal-oopa/personal-portfolio) and populated from Sahil's resume and public GitHub projects.
+Portfolio of Sahil Rohankar, Software Developer in Pune, India.
 
 ## Run locally
 
