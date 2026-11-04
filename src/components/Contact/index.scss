@@ -1,0 +1,195 @@
+.contact-form {
+  width: 100%;
+  margin-top: 20px;
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 0;
+      margin: 0;
+      border-radius: 0.5rem;
+      list-style: none;
+      margin-bottom: 10px;
+      opacity: 0;
+      overflow: hidden;
+      display: block;
+      clear: both;
+      position: relative;
+      animation: fadeInUp 2s 2s;
+      animation-fill-mode: forwards;
+    }
+
+    li.half {
+      width: 49%;
+      margin-left: 2%;
+      float: left;
+      clear: none;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  input[type='text'],
+  input[type='email'] {
+    width: 100%;
+    border: 0;
+    background: #353535;
+    height: 50px;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    width: 100%;
+    border: 0;
+    background: #353535;
+    height: 50px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 150px;
+  }
+
+  .flat-button {
+    color: #ff4500;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    padding: 8px 10px;
+    border: 1px solid #ff4500;
+    float: left;
+    border-radius: 4px;
+    background: 0 0;
+    text-transform: uppercase;
+    float: right;
+    text-align: center;
+    margin-right: 10px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #ff4500;
+      color: #000;
+    }
+  }
+}
+
+.contact-links {
+  display: grid;
+  gap: 16px;
+  margin-top: 30px;
+  font: 16px 'Helvetica Neue', sans-serif;
+
+  a,
+  .contact-location {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  a:hover,
+  svg {
+    color: #00ff7f;
+  }
+}
+
+.contact-card {
+  position: absolute;
+  right: 12%;
+  top: 50%;
+  transform: translateY(-50%) rotate(2deg);
+  width: 300px;
+  padding: 34px;
+  border: 1px solid rgba(0, 255, 127, 0.35);
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(0, 255, 127, 0.12), rgba(12, 18, 15, 0.92));
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif;
+
+  .contact-card-mark {
+    display: grid;
+    place-items: center;
+    width: 72px;
+    height: 72px;
+    border-radius: 20px;
+    background: #00ff7f;
+    color: #101713;
+    font: 700 27px 'Coolvetica', sans-serif;
+  }
+
+  .contact-card-label {
+    margin: 32px 0 8px;
+    color: #00ff7f;
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  h2 {
+    margin: 0 0 20px;
+    font: 28px 'Coolvetica', sans-serif;
+  }
+
+  span {
+    color: #b9c5be;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-card {
+    display: none;
+  }
+}
+
+.map-wrap {
+  position: relative;
+  background: rgba(8, 253, 216, 0.1);
+  float: right;
+  width: 53%;
+  height: 115%;
+  margin-top: -3%;
+}
+
+.leaflet-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: backInRight 1s 1.2s;
+  animation-fill-mode: forwards;
+}
+
+.info-map {
+  position: absolute;
+  background: #000;
+  top: 2%;
+  left: 6%;
+  z-index: 1;
+  width: 30%;
+  padding: 3%;
+  color: #fff;
+  font-family: 'Helvetica';
+  font-size: 17px;
+  font-weight: 300;
+  opacity: 0;
+  border-radius: 0.5rem;
+  animation: fadeIn 1s 1.5s;
+  animation-fill-mode: forwards;
+
+  span {
+    font-size: 16px;
+
+    span {
+      color: #ffd700;
+    }
+  }
+}
